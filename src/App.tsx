@@ -1,17 +1,17 @@
 import React from 'react';
 import {
-  BrowserRouter as Router,
+  Router,
   Route,
   Switch
 } from "react-router-dom";
-
+import { history } from './store'
 import './App.css';
 import About from "./pages/About";
 import Home from "./pages/Home";
 
 const App = () => {
   return (
-      <Router>
+      <Router history={ history }>
         <Switch>
           <Route
               path="/"
